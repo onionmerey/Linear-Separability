@@ -3,6 +3,7 @@ Objective:
 1) verify the theoretical guarantee from the paper "Property Testing of LP-type problems" that sample size of 10*d/epsilon and LP with extra cheking provides 2/3 accuracy, 
 2) see how tester behaves for epsilon far cases
 Code logic: 
+There are two .m code files for NLS and LS cases. NLS cases are read from file while LS cases generated online and not saved
 1) The inputs are read from .txt file with pattern name "2D_numberOfPoints_trueDistance_randomId". File format (first line number of points then each row is "x y z " where x, y - coordinates, z label (. or #))
 2) The only hyperparameter is k_factor. This k_factor determines the sample size k_factor*d/epsilon (d = 2 for that experiment)
 3) The code runs LP on all points and fins whether points are linearly separable or not indeed (this used as ground truth separability furhter to compare with answer of LP on sampled points)
