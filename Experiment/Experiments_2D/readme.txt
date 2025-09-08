@@ -4,7 +4,7 @@ Objective:
 2) see how tester behaves for epsilon far cases
 Code logic: 
 There are two .m code files for NLS and LS cases. NLS cases are read from file while LS cases generated online and not saved
-1) The inputs are read from .txt file with pattern name "2D_numberOfPoints_trueDistance_randomId". File format (first line number of points then each row is "x y z " where x, y - coordinates, z label (. or #))
+1) The inputs are read from .txt file with pattern name "2D_numberOfPoints_trueDistance_randomId". File format (first line: number of points, then each row is "x y z " where x, y - coordinates, z label (. or #))
 2) The only hyperparameter is k_factor. This k_factor determines the sample size k_factor*d/epsilon (d = 2 for that experiment)
 3) The code runs LP on all points and fins whether points are linearly separable or not indeed (this used as ground truth separability furhter to compare with answer of LP on sampled points)
 4) Two sampling approaches are applied. Method 1 is "Sample points. Try to find whether they are linearly  separable by LP. So actually they are separable if LP can find some feasible solution"
